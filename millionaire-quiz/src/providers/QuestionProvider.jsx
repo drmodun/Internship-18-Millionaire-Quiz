@@ -1,40 +1,48 @@
-import { chosenQuestions, questions, generateQuestions} from "../data";
-import { Question } from "../models/Question";
-import { createContext, useContext, useState} from "react";
+import Question from "../components/Question";
+import { chosenQuestions, questions, generateQuestions } from "../data";
+import { createContext, useContext, useState } from "react";
+
+generateQuestions();
 
 const defaultContext = {
     questions: questions,
-    chosenQuestions: chosenQuestions,
+    chosenQuestions,
     currentQuestionIndex: 0,
-    currentQuestion: chosenQuestions[0],
+    currentQuestion: null,
     updateCurrentQuestion: () => {},
     resetQuestions: () => {},
-    finish : () => {},
-    isFinished : false,
+    finish: () => {},
+    isFinished: false,
 }
 
 export const QuestionContext = createContext(defaultContext);
 
-export const QuestionProvider = ({children}) => {
-    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+export const QuestionProvider = ({ children }) => {
+    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(defaultContext.currentQuestionIndex);
+
     const [isFinished, setIsFinished] = useState(false);
-    const [Questions, setChosenQuestions] = useState(Questions);
-    const [currentQuestion, setCurrentQuestion] = useState(chosenQuestions[currentQuestionIndex]);
+    const [questions, setQuestions] = useState(defaultContext.questions);
+
+    const [chosenQuestions, setChosenQuestions] = useState(defaultContext.chosenQuestions);
+    const [currentQuestion, setCurrentQuestion] = useState(defaultContext.chosenQuestions[currentQuestionIndex]);
 
     const updateCurrentQuestion = () => {
+        console.log("update");
         if (currentQuestionIndex < 14) {
-            setCurrentQuestionIndex(currentQuestionIndex + 1);
-            setCurrentQuestion(chosenQuestions[currentQuestionIndex + 1]);
+            setCurrentQuestionIndex(prev => prev + 1);
         } else {
             setIsFinished(true);
         }
+        console.log(currentQuestionIndex, currentQuestion);
     }
 
     const resetQuestions = () => {
-        setCurrentQuestionIndex(0);
-        setCurrentQuestion(chosenQuestions[0]);
+        console.log("reset");
         setIsFinished(false);
-        generateQuestions();
+        
+        setChosenQuestions(generateQuestions());
+        setCurrentQuestionIndex(0);
+        
 
 
     }

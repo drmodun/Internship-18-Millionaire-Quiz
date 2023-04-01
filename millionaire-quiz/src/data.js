@@ -176,16 +176,18 @@ const questions = [
 
 ];
 */
-export const questions  = [...json]
-export const chosenQuestions = [];
+export const questions  = json
+export let chosenQuestions = [];
 export function generateQuestions() {
-    chosenQuestions = [];
+    let chosenQuestions = [];
     for (let i = 0; i < 15; i++) {
         const question = questions[Math.floor(Math.random() * questions.length)];
         if (!chosenQuestions.includes(question))
             chosenQuestions.push(question);
     }
+    return chosenQuestions;
 }
+chosenQuestions = generateQuestions();
 console.log(json);
 console.log(questions);
-console.log(JSON.stringify(questions));
+//console.log(JSON.stringify(questions));

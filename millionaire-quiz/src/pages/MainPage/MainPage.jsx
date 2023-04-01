@@ -1,12 +1,27 @@
-export const MainPage = () => {
-    return (
-        <div className="main-page">
-            <div className="main-page__content">
-                <h1 className="main-page__title">Millionaire Quiz</h1>
-                <p className="main-page__description">
-                    Answer 15 questions and win a million dollars!
-                </p>
-            </div>
-        </div>
-    );
+import React from 'react';
+import { questions } from '../../data.js';
+import Question from '../../components/Question';
+import  useQuestion, {QuestionProvider} from '../../providers/QuestionProvider';
+function MainPage() {
+  const { chosenQuestions, currentQuestionIndex, updateCurrentQuestion, resetQuestions } = useQuestion();
+
+  const onSubmit = (isCorrect) => {
+    if (isCorrect)
+      updateCurrentQuestion();
+    else
+      resetQuestions();
+
+  }
+
+  return (
+    <QuestionProvider>
+      <div className="App">
+        <h1>Millionaire Quiz</h1>
+        <Question question={chosenQuestions[currentQuestionIndex]} onSubmit={onSubmit} />
+      </div>
+    </QuestionProvider>
+
+  );
 }
+
+export default MainPage;

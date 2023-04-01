@@ -1,5 +1,4 @@
 import { createContext, useContext, useState } from "react";
-import { Questions } from "../data/Questions";
 
 const defaultContext = {
     additionalProps: null,

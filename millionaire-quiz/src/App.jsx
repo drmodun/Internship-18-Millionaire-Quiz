@@ -1,12 +1,13 @@
 import React from 'react';
 import './data.js';
-
+import Question from './components/Question';
+import useQuestion, { QuestionProvider } from './providers/QuestionProvider.jsx';
+import MainPage from './pages/MainPage/MainPage.jsx';
 function App() {
   return (
-    <div className="App">
-      <h1>Millionaire Quiz</h1>
-      
-    </div>
+    <QuestionProvider>
+      <MainPage></MainPage>
+    </QuestionProvider>
   );
 }
 
