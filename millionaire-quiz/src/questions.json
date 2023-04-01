@@ -1,0 +1,302 @@
+[
+    {
+        "text": "What is the capital of France?",
+        "choices": [
+            "London",
+            "Paris",
+            "Berlin",
+            "Madrid"
+        ],
+        "answer": "Paris"
+    },
+    {
+        "text": "Who is CEO of Tesla?",
+        "choices": [
+            "Jeff Bezos",
+            "Elon Musk",
+            "Bill Gates",
+            "Tony Stark"
+        ],
+        "answer": "Elon Musk"
+    },
+    {
+        "text": "The iPhone was created by which company?",
+        "choices": [
+            "Apple",
+            "Intel",
+            "Amazon",
+            "Microsoft"
+        ],
+        "answer": "Apple"
+    },
+    {
+        "text": "How many Harry Potter books are there?",
+        "choices": [
+            "1",
+            "4",
+            "6",
+            "7"
+        ],
+        "answer": "7"
+    },
+    {
+        "text": "What is the name of the main character in the Lord of the Rings?",
+        "choices": [
+            "Harry Potter",
+            "Frodo Baggins",
+            "Tony Stark",
+            "Luke Skywalker"
+        ],
+        "answer": "Frodo Baggins"
+    },
+    {
+        "text": "What is actually Electricity?",
+        "choices": [
+            "A flow of electrons",
+            "Matter",
+            "Nothing",
+            "Dark Matter"
+        ],
+        "answer": "A flow of electrons"
+    },
+    {
+        "text": "What is the chemical formula of water?",
+        "choices": [
+            "H2O",
+            "H2O2",
+            "H2O3",
+            "H2O4"
+        ],
+        "answer": "H2O"
+    },
+    {
+        "text": "What is the chemical formula of carbon dioxide?",
+        "choices": [
+            "CO2",
+            "CO3",
+            "CO4",
+            "CO5"
+        ],
+        "answer": "CO2"
+    },
+    {
+        "text": "What is the chemical formula of carbon monoxide?",
+        "choices": [
+            "CO",
+            "CO2",
+            "CO3",
+            "CO4"
+        ],
+        "answer": "CO"
+    },
+    {
+        "text": "What is the chemical formula of carbon?",
+        "choices": [
+            "C",
+            "C2",
+            "C3",
+            "C4"
+        ],
+        "answer": "C"
+    },
+    {
+        "text": "What is the chemical formula of oxygen?",
+        "choices": [
+            "O",
+            "O2",
+            "O3",
+            "O4"
+        ],
+        "answer": "O2"
+    },
+    {
+        "text": "What is the chemical formula of hydrogen?",
+        "choices": [
+            "H",
+            "H2",
+            "H3",
+            "H4"
+        ],
+        "answer": "H2"
+    },
+    {
+        "text": "What is the chemical formula of nitrogen?",
+        "choices": [
+            "N",
+            "N2",
+            "N3",
+            "N4"
+        ],
+        "answer": "N2"
+    },
+    {
+        "text": "What is the formula for the speed of light?",
+        "choices": [
+            "c = f x λ",
+            "c = λ x f",
+            "c = f / λ",
+            "c = λ / f"
+        ],
+        "answer": "c = f x λ"
+    },
+    {
+        "text": "What is the formula for the speed of sound?",
+        "choices": [
+            "v = f x λ",
+            "v = λ x f",
+            "v = f / λ",
+            "v = λ / f"
+        ],
+        "answer": "v = f / λ"
+    },
+    {
+        "text": "What is the name of the largest organ in the human body?",
+        "choices": [
+            "Skin",
+            "Heart",
+            "Brain",
+            "Liver"
+        ],
+        "answer": "Skin"
+    },
+    {
+        "text": "What is the name of the largest bone in the human body?",
+        "choices": [
+            "Femur",
+            "Tibia",
+            "Humerus",
+            "Fibula"
+        ],
+        "answer": "Femur"
+    },
+    {
+        "text": "What is the name of the largest muscle in the human body?",
+        "choices": [
+            "Biceps",
+            "Triceps",
+            "Quadriceps",
+            "Gluteus Maximus"
+        ],
+        "answer": "Gluteus Maximus"
+    },
+    {
+        "text": "What is the capital of the United States?",
+        "choices": [
+            "Washington, D.C.",
+            "New York City",
+            "Los Angeles",
+            "Chicago"
+        ],
+        "answer": "Washington, D.C."
+    },
+    {
+        "text": "What is the capital of the United Kingdom?",
+        "choices": [
+            "London",
+            "Birmingham",
+            "Manchester",
+            "Liverpool"
+        ],
+        "answer": "London"
+    },
+    {
+        "text": "What is the capital of Germany?",
+        "choices": [
+            "Berlin",
+            "Munich",
+            "Frankfurt",
+            "Hamburg"
+        ],
+        "answer": "Berlin"
+    },
+    {
+        "text": "What is the capital of Italy?",
+        "choices": [
+            "Rome",
+            "Milan",
+            "Naples",
+            "Turin"
+        ],
+        "answer": "Rome"
+    },
+    {
+        "text": "What year did World War II end?",
+        "choices": [
+            "1945",
+            "1944",
+            "1943",
+            "1942"
+        ],
+        "answer": "1945"
+    },
+    {
+        "text": "What year did World War I end?",
+        "choices": [
+            "1918",
+            "1917",
+            "1916",
+            "1915"
+        ],
+        "answer": "1918"
+    },
+    {
+        "text": "What year did the Vietnam War end?",
+        "choices": [
+            "1975",
+            "1974",
+            "1973",
+            "1972"
+        ],
+        "answer": "1975"
+    },
+    {
+        "text": "What year did the Korean War end?",
+        "choices": [
+            "1953",
+            "1952",
+            "1951",
+            "1950"
+        ],
+        "answer": "1953"
+    },
+    {
+        "text": "What year did the Cold War end?",
+        "choices": [
+            "1991",
+            "1990",
+            "1989",
+            "1988"
+        ],
+        "answer": "1991"
+    },
+    {
+        "text": "What is the name of the programming language used to create this website?",
+        "choices": [
+            "JavaScript",
+            "Python",
+            "C#",
+            "Java"
+        ],
+        "answer": "JavaScript"
+    },
+    {
+        "text": "Who wrote the novel 'The Lord of the Rings'?",
+        "choices": [
+            "J.R.R. Tolkien",
+            "J.K. Rowling",
+            "George R.R. Martin",
+            "C.S. Lewis"
+        ],
+        "answer": "J.R.R. Tolkien"
+    },
+    {
+        "text": "What is the name of the library used to create this website?",
+        "choices": [
+            "React",
+            "Angular",
+            "Vue",
+            "Svelte"
+        ],
+        "answer": "React"
+    }
+]
