@@ -1,6 +1,6 @@
 import { chosenQuestions, questions, generateQuestions} from "../data";
 import { Question } from "../models/Question";
-import { createContext, useState } from "react";
+import { createContext, useContext, useState} from "react";
 
 const defaultContext = {
     questions: questions,
@@ -59,4 +59,7 @@ export const QuestionProvider = ({children}) => {
         </QuestionContext.Provider>
     )
 }
+const useQuestion = () => useContext(QuestionContext);
+export default useQuestion;
+
 

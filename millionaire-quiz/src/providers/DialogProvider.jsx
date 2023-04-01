@@ -1,4 +1,4 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
 import { Questions } from "../data/Questions";
 
 const defaultContext = {
@@ -34,4 +34,7 @@ export const DialogProvider = ({children}) => {
             {children}
         </DialogContext.Provider>
     )
+
 }
+const useDialog = () => useContext(DialogContext);
+export default useDialog;
