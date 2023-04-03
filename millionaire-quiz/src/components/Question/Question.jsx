@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import classes from "./Question.module.css";
 import useDialog, { DIALOG } from "../../providers/DialogProvider";
 import { DialogSwitch } from "../Dialogs/DialogSwitch";
-export const Question = ({ question, onSubmit }) => {
+export const Question = ({ question, onSubmit, availableChoices}) => {
     const {open, activeDialog} = useDialog()
     const letters = ["A", "B", "C", "D"];
     console.log(question);
@@ -43,7 +43,7 @@ export const Question = ({ question, onSubmit }) => {
                             chooseAnswer(index);
 
                         }}>
-                        <span className={classes.Letter}>{letters[index]}</span> {choice}
+                        <span className={classes.Letter}>{letters[index]}</span> {availableChoices[index] ? choice : " "}
                     </button>
                 ))}
 
