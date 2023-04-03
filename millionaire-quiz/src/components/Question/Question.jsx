@@ -42,7 +42,8 @@ export const Question = ({ question, onSubmit, availableChoices}) => {
                         onClick={() => {
                             chooseAnswer(index);
 
-                        }}>
+                        }
+                        } disabled = {availableChoices[index] ? false : true }>
                         <span className={classes.Letter}>{letters[index]}</span> {availableChoices[index] ? choice : " "}
                     </button>
                 ))}

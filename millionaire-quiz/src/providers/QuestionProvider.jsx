@@ -38,7 +38,7 @@ export const QuestionProvider = ({ children }) => {
 
     const resetQuestions = () => {
         console.log("reset");
-        setIsFinished(false);
+        setIsFinished(true);
         
         setChosenQuestions(generateQuestions());
         setCurrentQuestionIndex(0);
