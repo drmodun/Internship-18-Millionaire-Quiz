@@ -1,7 +1,6 @@
 import React from 'react';
 import './data.js';
-import Question from './components/Question';
-import useQuestion, { QuestionProvider } from './providers/QuestionProvider.jsx';
+import  { QuestionProvider } from './providers/QuestionProvider.jsx';
 import MainPage from './pages/MainPage/MainPage.jsx';
 function App() {
   return (
