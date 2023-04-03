@@ -1,15 +1,17 @@
-import { useContext } from "react";
-import { DialogContext } from "../../providers/DialogProvider";
-import { QuestionContext } from "../../providers/QuestionProvider";
 import classes from "./Board.module.css";
-import { dividerClasses } from "@mui/material";
 
 export const Board = (props) => {
-    const { activeDialog, close, additionalProps } = useContext(DialogContext);
-    const Dialog = activeDialog;
-    const questions = useContext(QuestionContext);
+    const values = [100, 200, 300, 500, 1000, 2000, 4000, 8000, 16000, 32000, 64000, 125000, 250000, 500000, 1000000];
+    const colors = ["white", "orange", "orange", "orange", "white", "orange", "orange", "orange", "orange", "white", "orange", "orange", "orange", "orange", "white"];
     return (
-        <div></div>
-
-        )
+        <div className={classes.Board}>
+            <div className = {classes.BoardTitle}>Pitanje</div>
+            {values.map((value, index) => (
+                <div key={index} className={ index === props.currentQuestionIndex ? classes.CurrentItem : classes.BoardItem} style={{ color: props.currentQuestionIndex===index ? "black" : colors[index] }}>
+                    <span className={classes.ItemText}>{"$" + " " + value}</span>
+                </div>
+            ))}
+        </div>
+    );
+    
 }

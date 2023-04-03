@@ -180,7 +180,7 @@ export const questions  = json
 export let chosenQuestions = [];
 export function generateQuestions() {
     let chosenQuestions = [];
-    for (let i = 0; i < 15; i++) {
+    while (chosenQuestions.length < 15) {
         const question = questions[Math.floor(Math.random() * questions.length)];
         if (!chosenQuestions.includes(question))
             chosenQuestions.push(question);

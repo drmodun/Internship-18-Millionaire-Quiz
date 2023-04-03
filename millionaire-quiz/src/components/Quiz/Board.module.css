@@ -1,0 +1,59 @@
+.Board{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:space-between;
+    width: 400px;
+    min-height: 600px;
+    background-color: darkblue;
+    border: solid 1px #fff;
+    border-radius: 10px;
+    margin-left: 20px;
+}
+.BoardTitle{
+    font-size: 2rem;
+    color: #fff;
+    align-self: center;
+    margin-bottom: 10px;
+}   
+.BoardItem:last-child{
+    border-radius: 0px 0px 10px 10px;
+}
+.CurrentItem:last-child{
+    border-radius: 0px 0px 10px 10px;
+}
+.BoardItem{
+    display: flex;
+    width: 100%;
+    text-align: flex-start;
+    background-color:darkblue;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.7rem;
+    transition:background-color 0.3s ease-in-out;
+}
+.ItemText{
+    margin-left: 10px;
+}
+.BoardItem:hover{
+    background-color: cornflowerblue;
+    color: #000000;
+    cursor: pointer;
+}
+.CurrentItem{
+    font-size: 1.7rem;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    text-align: flex-start;
+    background-color: #FFD700;
+    color: #000;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    font-weight: 700;
+}
+.CurrentItem:hover{
+    background-color: #FFB000;
+    color: #000;
+    cursor: pointer;
+}
