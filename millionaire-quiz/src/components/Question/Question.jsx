@@ -1,12 +1,19 @@
 import { useEffect, useState } from "react";
 import classes from "./Question.module.css";
-import useDialog from "../../providers/DialogProvider";
+import useDialog, { DIALOG } from "../../providers/DialogProvider";
+import { DialogSwitch } from "../Dialogs/DialogSwitch";
 export const Question = ({ question, onSubmit }) => {
-    const dialog = useDialog()
+    const {open, activeDialog} = useDialog()
     const letters = ["A", "B", "C", "D"];
     console.log(question);
     const chooseAnswer = (index) => {
-        handleAnswer(index);
+        open( DIALOG.SUBMIT, {
+            onSubmit: () => {
+                handleAnswer(index);
+            },
+            choice : question.choices[index],
+        });
+        //handleAnswer(index);
     }
 
 
@@ -41,6 +48,7 @@ export const Question = ({ question, onSubmit }) => {
                 ))}
 
             </div>
+            <DialogSwitch/>
         </div>
             );
     }

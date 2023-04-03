@@ -4,6 +4,8 @@ import Question from '../../components/Question';
 import  useQuestion, {QuestionProvider} from '../../providers/QuestionProvider';
 import classes from './MainPage.module.css';
 import { Board } from '../../components/Quiz/Board.jsx';
+import { DialogProvider } from '../../providers/DialogProvider.jsx';
+import { DialogSwitch } from '../../components/Dialogs/DialogSwitch.jsx';
 function MainPage() {
   const { chosenQuestions, currentQuestionIndex, updateCurrentQuestion, resetQuestions } = useQuestion();
 
@@ -17,6 +19,7 @@ function MainPage() {
 
   return (
     <QuestionProvider>
+      <DialogProvider>
       <div className="App">
         <h1>Millionaire Quiz</h1>ž
         <div className={classes.GameContainer}>
@@ -24,6 +27,8 @@ function MainPage() {
         <Board currentQuestionIndex = {currentQuestionIndex}></Board>
         </div>
       </div>
+      <DialogSwitch/>
+      </DialogProvider>
     </QuestionProvider>
 
   );

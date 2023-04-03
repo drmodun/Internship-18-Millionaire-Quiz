@@ -1,5 +1,11 @@
 import { createContext, useContext, useState } from "react";
 
+export const DIALOG = {
+    SUBMIT: "SUBMIT",
+    INFO: "INFO"
+}
+
+
 const defaultContext = {
     additionalProps: null,
     activeDialog: null,
@@ -11,16 +17,18 @@ const defaultContext = {
 export const DialogContext = createContext(defaultContext);
 
 export const DialogProvider = ({children}) => {
-    const [additionalProps, setAdditionalProps] = useState(null);
-    const [activeDialog, setActiveDialog] = useState(false);
+    const [additionalProps, setAdditionalProps] = useState(defaultContext.additionalProps);
+    const [activeDialog, setActiveDialog] = useState(defaultContext.activeDialog);
 
     const open = (dialog, props) => {
+        console.log(dialog, props);
         setAdditionalProps(props);
         setActiveDialog(dialog);
     }
 
     const close = () => {
         setActiveDialog(null);
+        setAdditionalProps({});
     }
 
     return (

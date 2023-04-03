@@ -1,14 +1,12 @@
-import { Dialog, DialogTitle, DialogContent, DialogContentText, DialogActions, Button } from "@material-ui/core";
-export const CreateInfoDialog = ({ open, onClose, text, info }) => {
+import { Dialog, DialogTitle, DialogActions, Button, backdropClasses } from "@mui/material";
+export const CreateInfoDialog = ({ isOpen, onClose, text, info }) => {
 
     const { title, content } = [text, info];
 
     return (
-        <Dialog open={open} onClose={onClose}>
+        <Dialog PaperProps={ {backdroungColor : "white"}} open={isOpen} onClose={onClose}>
             <DialogTitle>{title}</DialogTitle>
-            <DialogContent>
-                <DialogContentText>{content}</DialogContentText>
-            </DialogContent>
+                <span>{content}</span>
             <DialogActions>
                 <Button onClick={onClose}>Close</Button>
             </DialogActions>
