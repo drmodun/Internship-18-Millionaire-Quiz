@@ -31,7 +31,7 @@ export const Question = ({ question, onSubmit, availableChoices}) => {
                 onSubmit(false);
             }
             setClicked(prev=>prev.map((item, i) => i === index ? 0 : 0));
-        }, 1000);
+        }, 3000);
         
     }
 
