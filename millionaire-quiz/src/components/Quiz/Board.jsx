@@ -6,9 +6,9 @@ export const Board = (props) => {
     return (
         <div className={classes.Board}>
             <div className = {classes.BoardTitle}>Pitanje</div>
-            {values.map((value, index) => (
-                <div key={index} className={ index === props.currentQuestionIndex ? classes.CurrentItem : classes.BoardItem} style={{ color: props.currentQuestionIndex===index ? "black" : colors[index] }}>
-                    <span className={classes.ItemText}>{"$" + " " + value}</span>
+            {values.reverse().map((value, index) => (
+                <div key={index} className={ 15-1-index === props.currentQuestionIndex ? classes.CurrentItem : classes.BoardItem} style={{ color: props.currentQuestionIndex===15-1-index ? "black" : colors[index] }}>
+                    <span style={{width : "30px"}}>{15-index}</span><span className={classes.ItemText}>{"$" + " " + value}</span>
                 </div>
             ))}
         </div>

@@ -1,15 +1,16 @@
 import { Dialog, DialogTitle, DialogActions, Button } from "@mui/material";
-export const CreateInfoDialog = ({ isOpen, onClose, text, info }) => {
+import useQuestion from "../../../providers/QuestionProvider";
+export const CreateInfoDialog = ({ isOpen, onClose, text, info}) => {
 
     const [title, content] = [text, info];
-
+    const { finish } = useQuestion();
     return (
         <Dialog PaperProps={{backgroundColor : "white"}} open={isOpen} onClose={onClose}>
             <DialogTitle>{title}</DialogTitle>
             <DialogTitle>{content}</DialogTitle>
         
             <DialogActions>
-                <Button onClick={onClose}>Close</Button>
+                <Button onClick={()=>{if (title==="Congratulations") {finish() ;onClose()} else onClose()}}>Close</Button>
             </DialogActions>
         </Dialog>
     );
