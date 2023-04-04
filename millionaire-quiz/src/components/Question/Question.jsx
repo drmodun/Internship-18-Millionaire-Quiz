@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import classes from "./Question.module.css";
 import useDialog, { DIALOG } from "../../providers/DialogProvider";
 import { DialogSwitch } from "../Dialogs/DialogSwitch";
+import { questions } from "../../data";
 export const Question = ({ question, onSubmit, availableChoices}) => {
     const {open, activeDialog} = useDialog()
     const letters = ["A", "B", "C", "D"];
+    const [clicked, setClicked] = useState([0,0,0,0]);
     console.log(question);
     const chooseAnswer = (index) => {
         open( DIALOG.SUBMIT, {
@@ -19,14 +21,18 @@ export const Question = ({ question, onSubmit, availableChoices}) => {
 
     const handleAnswer = (index) => {
         console.log(index, question.choices[index], question.answer);
-        if (question.choices[index] === question.answer) {
-            console.log("correct");
-            onSubmit(true);
-        } else {
-            console.log("wrong");
-            onSubmit(false);
-        }
-
+        setClicked(prev=>prev.map((item, i) => i === index || question.choices[i] === question.answer ? 1 : 0));
+        setTimeout(() => {
+            if (question.choices[index] === question.answer) {
+                console.log("correct");
+                onSubmit(true);
+            } else {
+                console.log("wrong");
+                onSubmit(false);
+            }
+            setClicked(prev=>prev.map((item, i) => i === index ? 0 : 0));
+        }, 1000);
+        
     }
 
     return (
@@ -43,7 +49,9 @@ export const Question = ({ question, onSubmit, availableChoices}) => {
                             chooseAnswer(index);
 
                         }
-                        } disabled = {availableChoices[index] ? false : true }>
+                        }
+                        style={{backgroundColor : clicked[index] ? question.choices[index] === question.answer ? "green" : "red" : ""}}
+                         disabled = {availableChoices[index] ? false : true }>
                         <span className={classes.Letter}>{letters[index]}</span> {availableChoices[index] ? choice : " "}
                     </button>
                 ))}
