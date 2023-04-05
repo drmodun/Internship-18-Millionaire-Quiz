@@ -1,0 +1,18 @@
+.logo{
+    width: 96px;
+    height: 75px;
+}
+.JokerRow{
+    display : flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 350px;
+}
+.JokerRow > button{
+    background-color: transparent;
+    border: none;
+}
+.JokerRow > button:hover{
+    cursor: pointer;
+}

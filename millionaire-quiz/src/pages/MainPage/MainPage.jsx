@@ -7,9 +7,8 @@ import { Board } from '../../components/Quiz/Board.jsx';
 import useDialog, { DIALOG, DialogProvider } from '../../providers/DialogProvider.jsx';
 import { DialogSwitch } from '../../components/Dialogs/DialogSwitch.jsx';
 import { Jokers } from '../../components/Joker/Joker.jsx';
-import { useForkRef } from '@mui/material';
 function MainPage() {
-  const { chosenQuestions, currentQuestionIndex, updateCurrentQuestion, finish, isWon, jokersUsed, updateJokersUsed} = useQuestion();
+  const { chosenQuestions, currentQuestionIndex, updateCurrentQuestion, finish, jokersUsed, updateJokersUsed} = useQuestion();
 
   const [choiceStates, setChoiceStates] = useState([true , true, true, true]);
   const {open} = useDialog();

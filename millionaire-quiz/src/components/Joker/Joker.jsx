@@ -1,9 +1,10 @@
 import {useEffect, useState } from "react";
 import useDialog, { DIALOG } from "../../providers/DialogProvider";
+import classes from "./Joker.module.css";
 export const Jokers = (props) => {
     const { open } = useDialog();
-    const [used, setUsed] = useState(props.uses);
 
+    
     useEffect(() => {
         setUsed(props.uses);
     }, [props.uses]);
@@ -69,11 +70,10 @@ export const Jokers = (props) => {
     }
 
     return (
-        <div>
-            <h1>Jokers</h1>
-            <button onClick={phoneAFriend} disabled={used[0]}><img></img></button>
-            <button onClick={askTheAudience} disabled={used[1]}>Ask the audience</button>
-            <button onClick={fiftyFifty} disabled={used[2]}>50/50</button>
+        <div className={classes.JokerRow}>
+            <button onClick={phoneAFriend}  disabled={used[0]}><img className={classes.logo} alt="50-50" src={"./assets/50-50" +(  used[0] ? "-off.webp" : ".webp")}></img></button>
+            <button onClick={askTheAudience}  disabled={used[1]}><img className={classes.logo} alt="Ask the audience"  src={"./assets/ask" +  (used[1] ? "-off.webp" : ".webp")}></img></button>
+            <button onClick={fiftyFifty}  disabled={used[2]}><img  className={classes.logo} alt="Phone a friend" src={"./assets/Phone" +  (used[2] ? "-off.webp" : ".webp")}/></button>
 
         </div>
     );
