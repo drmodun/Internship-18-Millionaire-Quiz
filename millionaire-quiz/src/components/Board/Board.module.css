@@ -1,39 +1,40 @@
 .Board{
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: flex-start;
-    justify-content:space-between;
-    width: 400px;
-    min-height: 600px;
-    background-color: darkblue;
-    border: solid 1px #fff;
     border-radius: 10px;
-    margin-left: 20px;
-}
-.BoardTitle{
-    font-size: 2rem;
-    color: #fff;
-    align-self: center;
-    margin-bottom: 10px;
-}   
-.BoardItem:last-child{
-    border-radius: 0px 0px 10px 10px;
-}
-.CurrentItem:last-child{
-    border-radius: 0px 0px 10px 10px;
+    width: 400px;
+    padding: 10px;
 }
 .BoardItem{
     display: flex;
-    width: 100%;
+    width:399px;
     text-align: flex-start;
     background-color:darkblue;
     justify-content: flex-start;
     align-items: center;
-    font-size: 1.7rem;
+    font-size: 22.56px;
+    color: #fff;  
+    border: 1px solid #fff;
+    border-top-style : none;
+    border-bottom-style: none; 
+
     transition:background-color 0.3s ease-in-out;
 }
-.ItemText{
-    margin-left: 10px;
+.BoardItem:first-child{
+    border-top-style: solid;
+}
+.BoardItem:last-child{
+    border-radius: 0px 0px 10px 10px;
+    border-bottom-style: solid;
+}
+.CurrentItem:first-child{
+    border-top-style: solid;
+}
+.CurrentItem:last-child{
+    border-radius: 0px 0px 10px 10px;
+    border-bottom-style: solid;
 }
 .BoardItem:hover{
     background-color: cornflowerblue;
@@ -41,7 +42,7 @@
     cursor: pointer;
 }
 .CurrentItem{
-    font-size: 1.7rem;
+    font-size: 22.56px;
     align-items: center;
     display: flex;
     width: 100%;

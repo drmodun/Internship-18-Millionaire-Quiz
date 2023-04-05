@@ -1,0 +1,39 @@
+.Scoreboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 600px;
+    background-color: darkblue;
+    border-radius: 10px;
+    color: #000;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    margin-left: 20px;
+}
+
+.Jokers {
+    margin-top: 60px;
+}
+
+.ScoreboardTitle {
+    width: 300px;
+    align-self: center;
+    text-align: left;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #FFD700;
+}
+
+.ScoreboardStandings {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}

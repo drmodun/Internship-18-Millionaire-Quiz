@@ -9,7 +9,7 @@ const defaultContext = {
     chosenQuestions,
     currentQuestionIndex: 0,
     currentQuestion: null,
-    updateCurrentQuestion: () => {},
+    setCurrentQuestionIndex: () => {},
     updateJokersUsed: () => {},
     resetQuestions: () => {},
     finish: () => {},
@@ -34,15 +34,7 @@ export const QuestionProvider = ({ children }) => {
     const [currentQuestion, setCurrentQuestion] = useState(defaultContext.chosenQuestions[currentQuestionIndex]);
 
     
-    const updateCurrentQuestion = () => {
-        console.log("update");
-        if (currentQuestionIndex < 14) {
-            setCurrentQuestionIndex(prev => prev + 1);
-        } else {
-            setIsWon(true);
-        }
-        console.log(currentQuestionIndex, currentQuestion);
-    }
+    
 
     const updateJokersUsed = (index) => {
         let temp = jokersUsed;
@@ -66,11 +58,10 @@ export const QuestionProvider = ({ children }) => {
             chosenQuestions,
             currentQuestionIndex,
             currentQuestion,
-            updateCurrentQuestion,
+            setCurrentQuestionIndex,
             updateJokersUsed,
             finish,
             isFinished,
-            isWon,
             jokersUsed,
         }}>
             {children}
