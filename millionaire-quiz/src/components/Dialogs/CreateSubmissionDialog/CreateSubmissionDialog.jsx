@@ -1,12 +1,12 @@
 import { Dialog, DialogTitle, DialogActions, Button } from "@mui/material";
 
-export const CreateSumbmissionDialog = ({ isOpen, onClose, onSubmit, choice}) => {
+export const CreateSumbmissionDialog = ({ isOpen, onClose ,onSubmit, choice}) => {
   const handleSubmit = () => {
     onSubmit();
     onClose();
   };
 
-  return (
+  return ( 
     <Dialog PaperProps={{backgroundColor : "white"}} open={isOpen} onClose={onClose}>
       <DialogTitle>Are you sure you want to select {choice} as your final answer?</DialogTitle>
       <DialogActions>

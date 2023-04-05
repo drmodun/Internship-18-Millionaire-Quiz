@@ -54,7 +54,7 @@
     color: #000;
     cursor: pointer;
 }
-.QuestionAnswerItem:active{
+.QuestionAnswerItem:focus{
     background-color: #FFD700;
     color: #000;
     cursor: pointer;
