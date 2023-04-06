@@ -3,7 +3,6 @@ import { questions } from '../../data.js';
 import Question from '../../components/Question';
 import useQuestion, { QuestionProvider } from '../../providers/QuestionProvider';
 import classes from './MainPage.module.css';
-import { Board } from '../../components/Board/Board.jsx';
 import useDialog, { DIALOG, DialogProvider } from '../../providers/DialogProvider.jsx';
 import { DialogSwitch } from '../../components/Dialogs/DialogSwitch.jsx';
 import { Jokers } from '../../components/Joker/Joker.jsx';
@@ -45,8 +44,15 @@ function MainPage() {
   }
 
   return (
-    <div className="App">
-      <h1>Millionaire Quiz</h1>ž
+    <div className="MainPage">
+      <h1 className={classes.Title}>
+        <span>Who</span>
+        <span>Wants</span>
+        <span>To</span>
+        <span>Win</span>
+        <span>a</span>
+        <span>MILLION</span>
+      </h1>
       <div className={classes.GameContainer}>
         <Question question={chosenQuestions[currentQuestionIndex]} onSubmit={onSubmit} availableChoices={choiceStates} />
         <Scoreboard fiftyFifty={fiftyFifty}></Scoreboard>

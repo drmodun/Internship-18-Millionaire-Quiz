@@ -4,3 +4,33 @@
   align-items: flex-start;
   justify-content: center;
 }
+
+.Title {
+  font-size: 60px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  color: blueviolet;
+  margin-bottom: 20px;
+}
+
+.Title>span {
+  margin-right: 70px;
+  text-transform: uppercase;
+}
+
+.Title>span:first-child {
+  margin-left: 70px;
+  margin-bottom: 50px;
+}
+
+.Title>span:nth-child(even) {
+  margin-top: 50px;
+}
+
+.Title>span:last-child {
+  margin: 0;
+  margin-left: 70px;
+  font-size: 100px;
+}
