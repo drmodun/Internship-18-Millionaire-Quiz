@@ -9,19 +9,18 @@ export const DIALOG = {
 const defaultContext = {
     additionalProps: null,
     activeDialog: null,
-    open : () => {},
-    close : () => {},
+    open: () => { },
+    close: () => { },
 
 }
 
 export const DialogContext = createContext(defaultContext);
 
-export const DialogProvider = ({children}) => {
+export const DialogProvider = ({ children }) => {
     const [additionalProps, setAdditionalProps] = useState(defaultContext.additionalProps);
     const [activeDialog, setActiveDialog] = useState(defaultContext.activeDialog);
 
     const open = (dialog, props) => {
-        console.log(dialog, props);
         setAdditionalProps(props);
         setActiveDialog(dialog);
     }

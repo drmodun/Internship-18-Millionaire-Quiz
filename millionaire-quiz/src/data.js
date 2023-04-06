@@ -1,5 +1,5 @@
 import json from "./questions.json"
-export const questions  = json
+export const questions = json
 export let chosenQuestions = [];
 export function generateQuestions() {
     let chosenQuestions = [];
@@ -11,5 +11,3 @@ export function generateQuestions() {
     return chosenQuestions;
 }
 chosenQuestions = generateQuestions();
-console.log(json);
-console.log(questions);

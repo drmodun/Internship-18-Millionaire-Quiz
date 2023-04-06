@@ -1,14 +1,12 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import classes from "./Question.module.css";
 import useDialog, { DIALOG } from "../../providers/DialogProvider";
 import { DialogSwitch } from "../Dialogs/DialogSwitch";
-import { questions } from "../../data";
 export const Question = ({ question, onSubmit, availableChoices }) => {
     const { open, activeDialog } = useDialog()
     const letters = ["A", "B", "C", "D"];
     const [clicked, setClicked] = useState([0, 0, 0, 0]);
     const [currentIndex, setCurrentIndex] = useState(NaN);
-    console.log(question);
     const chooseAnswer = (index) => {
         open(DIALOG.SUBMIT, {
             onSubmit: () => {
@@ -17,20 +15,16 @@ export const Question = ({ question, onSubmit, availableChoices }) => {
             choice: question.choices[index],
         });
         setCurrentIndex(index);
-        //handleAnswer(index);
     }
 
 
     const handleAnswer = (index) => {
-        console.log(index, question.choices[index], question.answer);
         setClicked(prev => prev.map((item, i) => i === index || question.choices[i] === question.answer ? 1 : 0));
         setTimeout(() => {
             ;
             if (question.choices[index] === question.answer) {
-                console.log("correct");
                 onSubmit(true);
             } else {
-                console.log("wrong");
                 onSubmit(false);
             }
             setClicked(prev => prev.map((item, i) => i === index ? 0 : 0));

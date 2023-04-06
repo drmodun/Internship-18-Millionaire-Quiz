@@ -1,65 +1,70 @@
-.Question{
+.Question {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 700px;
-    height: 400px; 
+    height: 400px;
     padding: 20px;
     box-sizing: border-box;
-    background-color:darkblue;
+    background-color: darkblue;
     border-radius: 10px;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     border: 1px solid #fff;
     margin-bottom: 20px;
 
 }
-.Question__title{
+
+.Question__title {
     font-size: 2rem;
     color: #fff;
     margin-bottom: 20px;
 }
-.Question__answers{
+
+.Question__answers {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 700px;
     padding: 20px;
     box-sizing: border-box;
-    background-color:darkblue;
+    background-color: darkblue;
     border-radius: 10px;
-    box-shadow: 0 0 10px 0 rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     border: 1px solid #fff;
 
 
 }
-.QuestionAnswerItem{
+
+.QuestionAnswerItem {
     display: flex;
     width: 45%;
     margin-right: 5%;
     text-align: flex-start;
-    background-color:cornflowerblue;
+    background-color: cornflowerblue;
     height: 60px;
-    padding: 20px;  
+    padding: 20px;
     justify-content: flex-start;
     align-items: center;
     border-radius: 10px;
-    border : 5px solid #FFD700
-    ;
+    border: 5px solid #FFD700;
     color: #fff;
     font-size: 1.5rem;
     margin-bottom: 20px;
 }
-.QuestionAnswerItem:hover{
+
+.QuestionAnswerItem:hover {
     background-color: #FFD700;
     color: #000;
     cursor: pointer;
 }
-.QuestionAnswerItem:focus{
+
+.QuestionAnswerItem:focus {
     background-color: #FFD700;
     color: #000;
     cursor: pointer;
 }
-.Letter{
+
+.Letter {
     font-size: 2rem;
     margin-right: 10px;
     color: orange;
