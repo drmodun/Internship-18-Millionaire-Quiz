@@ -2,7 +2,7 @@ import useDialog, { DIALOG } from "../../providers/DialogProvider";
 import classes from "./Joker.module.css";
 import useQuestion from "../../providers/QuestionProvider";
 export const Jokers = (props) => {
-    const { jokersUsed, updateJokersUsed, chosenQuestions, currentQuestionIndex } = useQuestion();
+    const { jokersUsed, updateJokersUsed, chosenQuestions, currentQuestionIndex, isFrozen, toggleFrozen} = useQuestion();
     const { open } = useDialog();
 
 
@@ -68,9 +68,9 @@ export const Jokers = (props) => {
 
     return (
         <div className={classes.JokerRow}>
-            <button onClick={fiftyFifty} disabled={jokersUsed[2]}><img className={classes.logo} alt="50-50" src={"./assets/50-50" + (jokersUsed[2] ? "-off.webp" : ".webp")}></img></button >
-            <button onClick={phoneAFriend} disabled={jokersUsed[0]}><img className={classes.logo} alt="Phone a friend" src={"./assets/Phone" + (jokersUsed[0] ? "-off.webp" : ".webp")} /></button>
-            <button onClick={askTheAudience} disabled={jokersUsed[1]}><img className={classes.logo} alt="Ask the audience" src={"./assets/ask" + (jokersUsed[1] ? "-off.webp" : ".webp")}></img></button>
+            <button onClick={fiftyFifty} disabled={jokersUsed[2] || isFrozen}><img className={classes.logo} alt="50-50" src={"./assets/50-50" + (jokersUsed[2] ? "-off.webp" : ".webp")}></img></button >
+            <button onClick={phoneAFriend} disabled={jokersUsed[0] || isFrozen}><img className={classes.logo} alt="Phone a friend" src={"./assets/Phone" + (jokersUsed[0] ? "-off.webp" : ".webp")} /></button>
+            <button onClick={askTheAudience} disabled={jokersUsed[1] || isFrozen}><img className={classes.logo} alt="Ask the audience" src={"./assets/ask" + (jokersUsed[1] ? "-off.webp" : ".webp")}></img></button>
         </div >
     );
 

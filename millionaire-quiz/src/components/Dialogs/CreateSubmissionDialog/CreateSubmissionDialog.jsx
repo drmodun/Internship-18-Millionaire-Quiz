@@ -7,7 +7,7 @@ export const CreateSumbmissionDialog = ({ isOpen, onClose, onSubmit, choice }) =
   };
 
   return (
-    <Dialog PaperProps={{ backgroundColor: "white" }} open={isOpen} onClose={onClose}>
+    <Dialog open={isOpen} onClose={onClose}>
       <DialogTitle>Are you sure you want to select {choice} as your final answer?</DialogTitle>
       <DialogActions>
         <Button onClick={onClose}>No</Button>

@@ -11,8 +11,9 @@ const defaultContext = {
     updateJokersUsed: () => { },
     resetQuestions: () => { },
     finish: () => { },
-    isFinished: false,
     jokersUsed: [0, 0, 0],
+    isFrozen: false,
+    setIsFrozen: () => { },
 }
 
 export const QuestionContext = createContext(defaultContext);
@@ -27,16 +28,16 @@ export const QuestionProvider = ({ children }) => {
 
     const [chosenQuestions, setChosenQuestions] = useState(defaultContext.chosenQuestions);
 
-
-
+    const [isFrozen, setIsFrozen] = useState(defaultContext.isFrozen);
 
     const updateJokersUsed = (index) => {
         let temp = jokersUsed;
         temp[index] = 1;
         setJokersUsed(temp);
+    }
 
-
-
+    const toggleFrozen = () => {
+        setIsFrozen(!isFrozen);
     }
 
     const finish = () => {
@@ -55,6 +56,8 @@ export const QuestionProvider = ({ children }) => {
             updateJokersUsed,
             finish,
             jokersUsed,
+            isFrozen,
+            toggleFrozen
         }}>
             {children}
         </QuestionContext.Provider>

@@ -5,7 +5,7 @@ export const CreateInfoDialog = ({ isOpen, onClose, text, info }) => {
     const [title, content] = [text, info];
     const { finish } = useQuestion();
     return (
-        <Dialog PaperProps={{ backgroundColor: "white" }} open={isOpen} onClose={onClose}>
+        <Dialog open={isOpen} onClose={onClose}>
             <DialogTitle>{title}</DialogTitle>
             <DialogTitle>{content}</DialogTitle>
 
